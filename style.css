@@ -190,7 +190,8 @@ input {
 }
 .acoes {
   display: flex;
-  justify-content: space-between; /* empurra igualmente para as laterais */
+  justify-content: center; /* empurra igualmente para as laterais */
+  gap: 5px;  
   padding: 0 20px; /* mesma distância da borda do card */
   margin-top: 20px;
 }
@@ -353,3 +354,4 @@ input {
 
 
        
+
