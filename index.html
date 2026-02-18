@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite 15 Anos - Marcela</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <div class="convite-container">
+        <div class="stars-bg"></div>
+
+        <div class="coluna">
+            <p class="quote">
+                '''Você pode sonhar, criar, desenhar e construir o lugar mais maravilhoso do mundo, mas é necessário ter pessoas especiais para transformar seu sonho em realidade."
+            </p>
+
+
+<div class="confirme">
+    <h2>Confirme sua presença:</h2>
+</div>            
+<input type="text" id="nome" placeholder="Seu nome">
+
+<div class="acoes">
+
+    <div class="acao">
+      <button class="icone-btn confirmar" onclick="enviar('Confirmado')">
+        <i class="material-symbols-outlined">
+        check
+        </i>
+      </button>
+      <h5>Confirmar presença</h5>
+    </div>
+  
+    <div class="acao">
+      <button class="icone-btn localizacao" title="Ver localização" onclick="abrirMapa()">
+      <i class="fa-solid fa-map-location-dot"></i>
+      </button>
+      <h5>Como chegar</h5>
+    </div>
+
+    <div class="acao">
+      <button class="icone-btn presente" title="Lista de presentes" onclick="toggleModal()">
+        <i class="material-symbols-outlined">
+          featured_seasonal_and_gifts
+        </i>
+      </button>
+      <h5>Sugestão para presente</h5>
+    
+  </div>
+</div>
+        </div>
+
+        <div class="coluna">
+            <h1 class="gold-text"><strong>Marcela<br>Maciel Silva</strong></h1>
+            
+            <p>Convido você para celebrarmos esse dia tão especial, meus 15 anos.</p>
+
+            <div class="date-time">
+                <span>01.05.2026</span>
+                <span>20:30h</span>
+                <span>sexta-feira</span>
+            </div>
+
+            <div class="location">
+                <strong>Chácara Espaço Aliança</strong>
+                Endereço: Rua 1, 215 - Lagoa de Santo Antônio,
+                Paracatu - MG<br><br>
+                
+            </div>
+
+            <p style="margin-top: 15px; font-weight: bold;">Traje: Esporte Fino<br>
+                Obs.: A pulseira é seu convite individual e o uso é
+                obrigatório, então não esqueça, pois será seu<br>
+                passaporte para a diversão.</p>
+        </div>
+    </div>
+    <div class="modal" id="modalPresente">
+      <div class="modal-content">
+        <button class="fechar-modal" onclick="toggleModal()">✕</button>
+          <h2>🎁Sugestão de presente:</h2><br>
+           <p>A sua presença é o maior presente, nesse dia tão esperado e sonhado por meus pais e por mim,
+           mas, se desejar me deixar mais feliz, a melhor opção é o pix:</p>🤩😍<br>
+
+            <br>Pix: 050135766-10<br>
+            Banco Bradesco<br>
+            Marcos Araújo da Silva
+      </div>
+    </div>
+<script src="./script.jss"></script>
+</body>
+</html>

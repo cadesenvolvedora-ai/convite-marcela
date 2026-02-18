@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
+    :root {
+        --bg-color: #0b2146; /* Azul escuro do convite */
+        --text-color: #e3c880; /* Dourado/Bege do texto */
+        --font-script: 'Great Vibes', cursive;
+        --font-serif: 'Cormorant Garamond', serif;
+        }
+
+     * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: var(--font-serif);
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+        /* Container principal sem as imagens de borda */
+        /* Container principal do convite (simulando o cartão aberto) */
+
+    .convite-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden; /* Importante para que as estrelas não "saiam" do convite */
+    border-radius: 8px;
+    z-index: 1; /* O convite como um todo fica na camada base */
+/* --- MOLDURA DE ESTRELAS --- */
+    border: 70px solid transparent; /* Espessura da borda */
+    border-image-source: url('estrelas.png');
+    border-image-slice: 415; /* Ajuste esse valor se as estrelas ficarem cortadas */
+    border-image-repeat: round; /* Faz as estrelas se repetirem harmoniosamente */
+}
+
+.convite-container h1,
+.convite-container h2,
+.convite-container h5,
+.convite-container p,
+.convite-container strong,
+.convite-container .quote,
+.convite-container .location {
+    background: linear-gradient(
+        120deg,
+        #f5e6a3,
+        #e3c880,
+        #caa437,
+        #e3c880,
+        #fff3b0
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Novas classes para as estrelas nos cantos */
+.star-corner {
+    position: absolute;
+    width: 200px; /* Ajuste o tamanho conforme desejar */
+    height: auto;
+    z-index: 1;
+    pointer-events: none; /* Permite clicar no conteúdo abaixo */
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: scaleX(-1); /* Espelha horizontal e verticalmente */
+}
+
+/* Mantenha o stars-bg para o efeito de brilho central sutil se quiser */
+.stars-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.1) 1px, transparent 2px);
+    background-size: 250px 250px;
+    opacity: 0.3; 
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* O restante do seu CSS permanece o mesmo */
+
+/* Efeito de brilho central sutil (opcional, mantido para não ficar chapado) */
+
+
+.coluna {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.coluna:first-child {
+    border-right: 1px solid rgba(227, 200, 128, 0.2);
+}
+
+h1 {
+    font-family: var(--font-script);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-family: var(--font-script);
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+
+}
+
+.date-time {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
+        }
+
+.location {
+    font-size: 1.2rem;
+}
+        
+.location strong {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.obs {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    border-top: 1px solid rgba(227, 200, 128, 0.5);
+    padding-top: 10px;
+}
+
+input {
+  font-family:  var(--font-serif);
+  font-weight: bold;
+  font-style: italic;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.confirme h2{
+    font-family: var(--font-serif);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+.acoes {
+  display: flex;
+  justify-content: space-between; /* empurra igualmente para as laterais */
+  padding: 0 20px; /* mesma distância da borda do card */
+  margin-top: 20px;
+}
+
+.acao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100px; /* garante simetria */
+}
+
+.acoes h5 {
+    font-family: var(--font-serif);
+    font-weight: bold;
+    font-style: italic;
+    color: #e3c880;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    opacity: 0.85;
+}
+
+.icone-btn {
+  border: 2px solid #e3c880;
+  background-color: #ffffff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icone-btn i {
+  font-size: 28px;
+  color:#e3c880;
+}
+
+.icone-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.info-presente {
+    display: none;
+    position: absolute;
+    bottom: 100%;        /* sobe acima do card */
+    left: 50%;
+    transform: translateX(-50%);
+  
+  margin-bottom: 12px;
+  padding: 12px 14px;
+
+  background: rgba(20, 123, 219, 0.75);
+  color: #fff;
+
+  border-radius: 10px;
+  font-size: 14px;
+  width: 85%;
+  text-align: center;
+
+  z-index: 10;
+}
+
+/* fundo escuro */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+
+/* caixa do modal */
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  width: 90%;
+  max-width: 320px;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  animation: surgir 0.3s ease;
+}
+
+/* botão fechar */
+.fechar-modal {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+
+  background: none;
+  border: 1px solid #333;
+  border-radius: 25%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; /* 🔥 importante */
+  padding: 0;     /* remove qualquer desalinhamento */
+}
+
+
+/* título */
+.modal-content h2 {
+    font-family: var(--font-serif);
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* texto */
+.modal-content p {
+    font-family: var(--font-serif);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* animação */
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+       
