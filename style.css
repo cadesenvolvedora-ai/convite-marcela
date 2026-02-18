@@ -42,9 +42,9 @@
     border-radius: 8px;
     z-index: 1; /* O convite como um todo fica na camada base */
 /* --- MOLDURA DE ESTRELAS --- */
-    border: 70px solid transparent; /* Espessura da borda */
+    border: 40px solid transparent; /* Espessura da borda */
     border-image-source: url('estrelas.png');
-    border-image-slice: 415; /* Ajuste esse valor se as estrelas ficarem cortadas */
+    border-image-slice: 410; /* Ajuste esse valor se as estrelas ficarem cortadas */
     border-image-repeat: round; /* Faz as estrelas se repetirem harmoniosamente */
 }
 
@@ -192,7 +192,7 @@ input {
   display: flex;
   justify-content: center;   /* centraliza o grupo */
   align-items: center;
-  gap: 10px;                 /* controla o espaço entre os botões */
+  gap: 5px;                 /* controla o espaço entre os botões */
   margin-top: 20px;
 }
 
@@ -354,5 +354,3 @@ input {
         }
 
        
-
-
