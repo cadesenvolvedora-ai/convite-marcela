@@ -190,18 +190,19 @@ input {
 }
 .acoes {
   display: flex;
-  justify-content: center; /* empurra igualmente para as laterais */
-  gap: 5px;  
-  padding: 0 20px; /* mesma distância da borda do card */
+  justify-content: center;   /* centraliza o grupo */
+  align-items: center;
+  gap: 5px;                 /* controla o espaço entre os botões */
   margin-top: 20px;
 }
+
 
 .acao {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100px; /* garante simetria */
+  width: auto; /* garante simetria */
 }
 
 .acoes h5 {
@@ -352,6 +353,4 @@ input {
             .qr-section { flex-direction: column; text-align: center; }
         }
 
-
        
-
