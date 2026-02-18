@@ -192,7 +192,7 @@ input {
   display: flex;
   justify-content: center;   /* centraliza o grupo */
   align-items: center;
-  gap: 5px;                 /* controla o espaço entre os botões */
+  gap: 8px;                 /* controla o espaço entre os botões */
   margin-top: 20px;
 }
 
@@ -354,3 +354,4 @@ input {
         }
 
        
+
